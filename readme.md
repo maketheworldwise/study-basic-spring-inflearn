@@ -11,4 +11,5 @@
 3. Owner에 age 추가
 ```
 
+- [강의 자료](https://docs.google.com/document/d/1fPwXquYpD9pMnZGM5ly6ihkfbiGw_BDKqwNChEz0w6A/edit#heading=h.ki9map5kxf2z)
 - [원본 README.md](docs/origin.md)
