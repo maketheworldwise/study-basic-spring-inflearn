@@ -26,7 +26,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+//import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -193,14 +193,15 @@ class OwnerController {
 	 * @param ownerId the ID of the owner to display
 	 * @return a ModelMap with the model attributes for the view
 	 */
-	@GetMapping("/owners/{ownerId}")
-	@LogExecutionTime
-	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
-		ModelAndView mav = new ModelAndView("owners/ownerDetails");
-		Owner owner = this.owners.findById(ownerId);
-		mav.addObject(owner);
-		return mav;
-	}
+	// spring web mvc 대신 webflux가 들어오면서 ModelAndView를 사용할 수 없어짐 (추가로 Tomcat에서 Netty로 변경됨)
+//	@GetMapping("/owners/{ownerId}")
+//	@LogExecutionTime
+//	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
+//		ModelAndView mav = new ModelAndView("owners/ownerDetails");
+//		Owner owner = this.owners.findById(ownerId);
+//		mav.addObject(owner);
+//		return mav;
+//	}
 
 	/********************************************************************************/
 
