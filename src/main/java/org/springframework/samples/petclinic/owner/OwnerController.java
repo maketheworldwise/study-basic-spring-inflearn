@@ -15,10 +15,12 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.sample.SampleRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -43,6 +45,20 @@ class OwnerController {
 
 	private final OwnerRepository owners;
 
+	// (1) 의존성 생성자 주입
+	private final SampleRepository sampleRepository;
+
+	// (2) 의존성 필드 주입
+	// @Autowired
+	// private SampleRepository sampleRepository;
+
+	// (3) 의존성 Setter 주입
+	// private SampleRepository sampleRepository;
+	// @Autowired
+	// public void setSampleRepository(SampleRepository sampleRepository) {
+	//	  this.sampleRepository = sampleRepository;
+	// }
+
 	// 원본
 //	public OwnerController(OwnerRepository clinicService) {
 //		this.owners = clinicService;
@@ -51,9 +67,10 @@ class OwnerController {
 	/********************************************************************************/
 	private final ApplicationContext applicationContext;
 
-	public OwnerController(OwnerRepository clinicService, ApplicationContext applicationContext) {
+	public OwnerController(OwnerRepository clinicService, ApplicationContext applicationContext, SampleRepository sampleRepository) {
 		this.owners = clinicService;
 		this.applicationContext = applicationContext;
+		this.sampleRepository = sampleRepository;
 	}
 
 	@GetMapping("/bean")

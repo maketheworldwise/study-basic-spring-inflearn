@@ -10,6 +10,10 @@
 2. 정확히 일치하는게 아니라 해당 키워드가 들어가있는걸 찾아볼까?
 3. Owner에 age 추가
 ```
+- 의존성 주입
+```
+1. OwnerController에 petRepository 주입하기 (petRepository가 제거되었으므로 SampleRepository를 만들어 주입하기)
+```
 
 - [강의 자료](https://docs.google.com/document/d/1fPwXquYpD9pMnZGM5ly6ihkfbiGw_BDKqwNChEz0w6A/edit#heading=h.ki9map5kxf2z)
 - [원본 README.md](docs/origin.md)
