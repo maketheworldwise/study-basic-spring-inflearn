@@ -4,4 +4,11 @@
 
 ## 🚀 Missions
 
+- 프로젝트 살펴보기
+```
+1. LastName이 아니라 FirstName으로 검색해볼까?
+2. 정확히 일치하는게 아니라 해당 키워드가 들어가있는걸 찾아볼까?
+3. Owner에 age 추가
+```
+
 - [원본 README.md](docs/origin.md)
